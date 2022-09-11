@@ -1,7 +1,11 @@
+import { useState } from 'react'
 import Head from 'next/head'
 // import Image from 'next/image'
+import MentorThumbnail from '../components/MentorThumbnail'
+import QuestionsModal from '../components/questionsModal'
 
 export default function Home() {
+  const [showQuestions, setShowQuestions] = useState(false);
   return (
     <div className='grow overflow-auto'>
       <Head>
@@ -23,8 +27,10 @@ export default function Home() {
               <div className="text-gray-500"><small className='font-bold'>Hobbies:</small> <small>Travelling 🌍, Dog mom 🐶, Yoga 🧘🏻‍♀️, self-taught coder 👩‍💻</small> </div>
             </div>
             <div className='flex flex-col justify-center p-5'>
-              <button className="bg-orange-600 text-white text-sm m-2 p-1 rounded-md">Find Batchmates &rsaquo;</button>
-              <button className="bg-orange-600 text-white text-sm m-2 p-1 rounded-md">Book Mentorship Sessions &rsaquo;</button>
+              <button className="bg-orange-600 text-white text-sm m-2 py-1 px-3 rounded-md">Find Batchmates &rsaquo;</button>
+              <button className="bg-orange-600 text-white text-sm m-2 py-1 px-3 rounded-md"
+                onClick={(e) => {setShowQuestions(true)}}
+              >Book Mentorship Sessions &rsaquo;</button>
             </div>
           </div>
         </article>
@@ -32,19 +38,11 @@ export default function Home() {
         <section className='drop-shadow-xl my-4 p-4 bg-white'>
           <h2 className='text-xl border-b border-orange-700/50 py-3 mb-2'>Mentor Availabilities</h2>
           <div className="flex gap-1">
-            <div className="w-40 p-2 bg-slate-200 rounded-md drop-shadow-lg cursor-pointer hover:drop-shadow-xl">
-              <div className="rounded-full bg-slate-900 w-20 h-20 mx-auto my-2"></div>
-              <h4 className='text-center'>Vienna Shanon</h4>
-              <h6 className='text-xs text-center'>Senior Software Engineer</h6>
-              <div className="my-4 text-xs">
-                <div className='font-bold'>Areas of interest</div>
-                <div>Hiking, Dog person, Baking</div>
-              </div>
-              <p className="text-orange-600 text-xs font-bold">“I have been working in this company for 7 years and am manging a team of 15 engineers.”</p>
-            </div>
+            <MentorThumbnail/>
           </div>
         </section>
       </main>
+      <QuestionsModal show={showQuestions} onClose={() => {setShowQuestions(false)}}/>
     </div>
   )
 }
