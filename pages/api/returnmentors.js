@@ -1,7 +1,7 @@
 let employeeData = [
     {
         name: 'Christine Vera',
-        profilePicture: '/public/images/profile/christineVera.png',
+        profilePicture: '/images/profile/christineVera.png',
         dateOfJoining: 'Oct-10-2020',
         position: 'Software Engineer (I)',
         team: 'A',
@@ -11,7 +11,7 @@ let employeeData = [
     },
     {
         name: 'Vienna Sharon',
-        profilePicture: '/public/images/profile/viennaSharon.png',
+        profilePicture: '/images/profile/viennaSharon.png',
         dateOfJoining: 'Jan-3-2015',
         position: 'Senior Software Engineer',
         team: 'A',
@@ -21,7 +21,7 @@ let employeeData = [
     },
     {
         name: 'MaryAnn Lizzi',
-        profilePicture: '/public/images/profile/maryannLizzi.png',
+        profilePicture: '/images/profile/maryannLizzi.png',
         dateOfJoining: 'Aug-15-2016',
         position: 'Senior Software Engineer',
         team: 'B',
@@ -31,7 +31,7 @@ let employeeData = [
     },
     {
         name: 'Andrea Rosen',
-        profilePicture: '/public/images/profile/andreaRosen.png',
+        profilePicture: '/images/profile/andreaRosen.png',
         dateOfJoining: 'Feb-05-2015',
         position: 'Senior Software Engineer',
         team: 'B',
@@ -41,7 +41,7 @@ let employeeData = [
     },
     {
         name: 'Joelle Margaret',
-        profilePicture: '/public/images/profile/joelleMargaret.png',
+        profilePicture: '/images/profile/joelleMargaret.png',
         dateOfJoining: 'May-20-2017',
         position: 'Senior Software Engineer',
         team: 'C',
@@ -51,7 +51,7 @@ let employeeData = [
     },
     {
         name: 'Josie Rowen',
-        profilePicture: '/public/images/profile/josieRowen.png',
+        profilePicture: '/images/profile/josieRowen.png',
         dateOfJoining: 'Mar-8-2018',
         position: 'Head Software Engineer',
         team: 'C',
@@ -80,10 +80,10 @@ function shuffle(array) {
   }
 
 export default function handler(req, res) {
-
+    const count = Number(req.query.count) || 3;
     let randomData = shuffle(employeeData);    
     let returnData = [];
-    for(let i=0; i<2; i ++){
+    for(let i=0; i<count; i ++){
         returnData.push(randomData[i]);
     }
     // console.log(returnData)
