@@ -1,7 +1,7 @@
 let employeeData = [
     {
         name: 'Christine Vera',
-        pic: '',
+        profilePicture: '/public/images/profile/christineVera.png',
         dateOfJoining: 'Oct-10-2020',
         position: 'Software Engineer (I)',
         team: 'A',
@@ -11,7 +11,7 @@ let employeeData = [
     },
     {
         name: 'Vienna Sharon',
-        pic: '',
+        profilePicture: '/public/images/profile/viennaSharon.png',
         dateOfJoining: 'Jan-3-2015',
         position: 'Senior Software Engineer',
         team: 'A',
@@ -21,7 +21,7 @@ let employeeData = [
     },
     {
         name: 'MaryAnn Lizzi',
-        pic: '',
+        profilePicture: '/public/images/profile/maryannLizzi.png',
         dateOfJoining: 'Aug-15-2016',
         position: 'Senior Software Engineer',
         team: 'B',
@@ -31,7 +31,7 @@ let employeeData = [
     },
     {
         name: 'Andrea Rosen',
-        pic: '',
+        profilePicture: '/public/images/profile/andreaRosen.png',
         dateOfJoining: 'Feb-05-2015',
         position: 'Senior Software Engineer',
         team: 'B',
@@ -41,7 +41,7 @@ let employeeData = [
     },
     {
         name: 'Joelle Margaret',
-        pic: '',
+        profilePicture: '/public/images/profile/joelleMargaret.png',
         dateOfJoining: 'May-20-2017',
         position: 'Senior Software Engineer',
         team: 'C',
@@ -51,7 +51,7 @@ let employeeData = [
     },
     {
         name: 'Josie Rowen',
-        pic: '',
+        profilePicture: '/public/images/profile/josieRowen.png',
         dateOfJoining: 'Mar-8-2018',
         position: 'Head Software Engineer',
         team: 'C',
