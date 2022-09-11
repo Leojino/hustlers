@@ -60,3 +60,5 @@ let employeeData = [
         languagesSpoken: ["English","French"],
     }
 ]
+
+export { employeeData };
